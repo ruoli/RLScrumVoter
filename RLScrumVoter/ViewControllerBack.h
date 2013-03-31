@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewControllerBack.h
 //  RLScrumVoter
 //
 //  Created by Ruoli Zhou on 27/01/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewControllerBack : UIViewController
 
 @end
