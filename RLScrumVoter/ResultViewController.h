@@ -15,6 +15,7 @@
 @property(strong,nonatomic)NSString *firstColNum;
 @property(strong,nonatomic)NSString *secondColNum;
 
+@property (weak, nonatomic) IBOutlet UIImageView *resultImage;
 - (IBAction)cardDismiss:(id)sender;
 
 @end

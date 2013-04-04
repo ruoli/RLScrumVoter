@@ -300,7 +300,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O0b-e1-05k">
-                                <rect key="frame" x="78" y="87" width="165" height="285"/>
+                                <rect key="frame" x="82" y="444" width="165" height="285"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="144"/>
                                 <state key="normal" backgroundImage="customresultbg.png">
                                     <color key="titleColor" red="1" green="0.11993747790000001" blue="0.072758136759999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,11 +313,16 @@
                                     <action selector="cardDismiss:" destination="wEt-A3-gAL" eventType="touchUpInside" id="BcW-nj-T8F"/>
                                 </connections>
                             </button>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="f0.png" id="dcc-Vy-ZUY">
+                                <rect key="frame" x="82" y="146" width="156" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cardBtn" destination="O0b-e1-05k" id="0GI-D9-gKi"/>
+                        <outlet property="resultImage" destination="dcc-Vy-ZUY" id="B2g-Z1-aR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-5T-cPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,6 +333,7 @@
     <resources>
         <image name="bigflamebtnbg.png" width="355" height="414"/>
         <image name="customresultbg.png" width="542" height="402"/>
+        <image name="f0.png" width="222" height="443"/>
         <image name="f1.png" width="234" height="458"/>
         <image name="f13.png" width="196" height="298"/>
         <image name="f2.png" width="267" height="393"/>
@@ -365,6 +371,7 @@
             <relationships>
                 <relationship kind="action" name="cardDismiss:"/>
                 <relationship kind="outlet" name="cardBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="resultImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>
@@ -374,6 +381,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pFh-JA-upB"/>
+        <segue reference="d9F-zn-Qtv"/>
     </inferredMetricsTieBreakers>
 </document>

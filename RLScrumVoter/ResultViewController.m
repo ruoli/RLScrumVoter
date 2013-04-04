@@ -38,8 +38,26 @@
     
     [self.cardBtn setTitle:num forState:UIControlStateNormal];
     
-    [self.cardBtn setImage:self.img forState:UIControlStateNormal];
+    [self.resultImage setImage:self.img];
+ 
+    UITapGestureRecognizer *tap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    [self.resultImage addGestureRecognizer:tap];
+
     
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+    [self.resultImage addGestureRecognizer:pinch];
+    
+}
+
+-(void)tapAction
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)handlePinch:(UIPinchGestureRecognizer *)gesture
+{
+    gesture.view.transform = CGAffineTransformMakeScale(gesture.scale, gesture.scale);
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,5 +69,9 @@
 
 - (IBAction)cardDismiss:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)viewDidUnload {
+    [self setResultImage:nil];
+    [super viewDidUnload];
 }
 @end
