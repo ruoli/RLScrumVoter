@@ -36,17 +36,28 @@
 - (IBAction)cardAction:(id)sender {
     UIImage *img = [(UIButton *)sender currentBackgroundImage];
     [self performSegueWithIdentifier:@"cardSegue" sender:img];
+    
+    
+   
 }
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ResultViewController *viewcontroller;
     if ([segue.identifier isEqualToString:@"cardSegue"]) {
-        //UIImage * img = [UIImage imageNamed:@"f1"];
         UIImage * img = (UIImage *)sender;
         
-        ResultViewController *viewcontroller = [segue destinationViewController];
+        viewcontroller = [segue destinationViewController];
         viewcontroller.img = img;
-
         }
-    }
+    
+}
+
+//-(UIViewAnimationTransition *)animationCompleted
+//{
+//    return [ UIViewAnimationOptionTransitionCrossDissolve];
+//}
+
 
 @end

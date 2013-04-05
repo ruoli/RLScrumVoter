@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CustomNumberViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface CustomNumberViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate,UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIPickerView *numberPicker;
-@property(strong, nonatomic)NSArray *listOfNumbers;
+@property (weak, nonatomic) IBOutlet UIButton *goBtn;
+@property(strong, nonatomic)NSArray *listOfNumbersOfLeftCol;
+@property(strong, nonatomic)NSArray *listOfNumbersOfRightCol;
 @property (strong,nonatomic)NSString *numberOfFirstColumn;
 @property(strong,nonatomic)NSString *numberOfSecondColumn;
+@property(strong,nonatomic)NSString *defaultNum;
 
 - (IBAction)goSetting:(id)sender;
 

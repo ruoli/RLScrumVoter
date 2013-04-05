@@ -99,7 +99,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uko-lH-PxL">
                                 <rect key="frame" x="20" y="395" width="86" height="133"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="f20.png">
+                                <state key="normal" backgroundImage="f21.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,7 +113,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7DF-ef-3Za">
                                 <rect key="frame" x="214" y="395" width="86" height="133"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="f25.png">
+                                <state key="normal" backgroundImage="f34.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -127,7 +127,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0XZ-vz-fEG">
                                 <rect key="frame" x="117" y="395" width="86" height="133"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="question.png">
+                                <state key="normal" backgroundImage="f?.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
@@ -174,7 +174,7 @@
                         <outletCollection property="cardBtns" destination="0XZ-vz-fEG" id="BSW-FT-cIF"/>
                         <outletCollection property="cardBtns" destination="7DF-ef-3Za" id="UGt-o1-5CA"/>
                         <outletCollection property="cardBtns" destination="esN-YG-ErE" id="hBW-AE-Ae3"/>
-                        <segue destination="wEt-A3-gAL" kind="modal" identifier="cardSegue" modalTransitionStyle="partialCurl" id="d9F-zn-Qtv"/>
+                        <segue destination="wEt-A3-gAL" kind="modal" identifier="cardSegue" customClass="ResultViewController" modalTransitionStyle="flipHorizontal" id="d9F-zn-Qtv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCr-zY-54u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,6 +284,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="goBtn" destination="zB2-pU-ncH" id="zBL-gf-Tuv"/>
                         <outlet property="numberPicker" destination="rCz-Ia-kMq" id="8aa-wy-sJZ"/>
                     </connections>
                 </viewController>
@@ -299,30 +300,33 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O0b-e1-05k">
-                                <rect key="frame" x="82" y="444" width="165" height="285"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="144"/>
-                                <state key="normal" backgroundImage="customresultbg.png">
-                                    <color key="titleColor" red="1" green="0.11993747790000001" blue="0.072758136759999995" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.78685461960000003" green="0.1068568002" blue="0.1068568002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cardDismiss:" destination="wEt-A3-gAL" eventType="touchUpInside" id="BcW-nj-T8F"/>
-                                </connections>
-                            </button>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="f0.png" id="dcc-Vy-ZUY">
-                                <rect key="frame" x="82" y="146" width="156" height="255"/>
+                            <view contentMode="scaleToFill" id="OJN-aZ-7Vj">
+                                <rect key="frame" x="86" y="137" width="160" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Ery-rO-vto">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="274"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="hIZ-Rt-HZB">
+                                        <rect key="frame" x="80" y="0.0" width="80" height="274"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="E62-ow-y5T">
+                                        <rect key="frame" x="-8" y="-8" width="168" height="282"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="cardBtn" destination="O0b-e1-05k" id="0GI-D9-gKi"/>
-                        <outlet property="resultImage" destination="dcc-Vy-ZUY" id="B2g-Z1-aR0"/>
+                        <outlet property="combinedViewImg" destination="OJN-aZ-7Vj" id="jhJ-pj-j76"/>
+                        <outlet property="defaultImgView" destination="E62-ow-y5T" id="dQd-60-ctd"/>
+                        <outlet property="subViewImgRight" destination="hIZ-Rt-HZB" id="7LM-eV-TFo"/>
+                        <outlet property="subViewImgleft" destination="Ery-rO-vto" id="Zd7-GA-l54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-5T-cPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,18 +336,16 @@
     </scenes>
     <resources>
         <image name="bigflamebtnbg.png" width="355" height="414"/>
-        <image name="customresultbg.png" width="542" height="402"/>
-        <image name="f0.png" width="222" height="443"/>
         <image name="f1.png" width="234" height="458"/>
         <image name="f13.png" width="196" height="298"/>
         <image name="f2.png" width="267" height="393"/>
-        <image name="f20.png" width="197" height="298"/>
-        <image name="f25.png" width="165" height="295"/>
+        <image name="f21.png" width="187" height="307"/>
         <image name="f3.png" width="241" height="369"/>
+        <image name="f34.png" width="188" height="295"/>
         <image name="f5.png" width="305" height="450"/>
         <image name="f8.png" width="250" height="414"/>
+        <image name="f?.png" width="358" height="472"/>
         <image name="pickergobtn.png" width="56" height="67"/>
-        <image name="question.png" width="358" height="472"/>
         <image name="settingicon.png" width="336" height="337"/>
     </resources>
     <classes>
@@ -355,6 +357,7 @@
             <relationships>
                 <relationship kind="action" name="goSetting:"/>
                 <relationship kind="action" name="sendCustomNum:"/>
+                <relationship kind="outlet" name="goBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="numberPicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
@@ -369,9 +372,10 @@
         <class className="ResultViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cardDismiss:"/>
-                <relationship kind="outlet" name="cardBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="resultImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="combinedViewImg" candidateClass="UIView"/>
+                <relationship kind="outlet" name="defaultImgView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="subViewImgRight" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="subViewImgleft" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>

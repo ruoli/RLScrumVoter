@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NumberGridViewController : UIViewController
+@interface NumberGridViewController : UIViewController 
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardBtns;
 

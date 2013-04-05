@@ -9,7 +9,9 @@
 #import "ResultViewController.h"
 
 @interface ResultViewController ()
-
+@property(strong,nonatomic)UIImage *imgLeft;
+@property(strong,nonatomic)UIImage *imgRight;
+@property(strong,nonatomic)UIImage *imgDf;
 @end
 
 @implementation ResultViewController
@@ -26,28 +28,64 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.frame = CGRectOffset(adView.frame, 0, 50.0f);    adView.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierPortrait];
+    adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    [self.view addSubview:adView];
+    adView.delegate = self;
+    self.bannerIsVisible = NO;
     
-//    if ([self.img isEqual:NULL]) {
-//        [self.cardBtn setTitle:self.firstColNum forState:UIControlStateNormal];
-//        NSLog(@"first is: %@",self.firstColNum);
-//    } else {
-//        [self.cardBtn setImage:self.img forState:UIControlStateNormal];
-//    }
-
-    NSString *num = [[NSString alloc] initWithFormat:@"%@%@",self.firstColNum,self.secondColNum];
     
-    [self.cardBtn setTitle:num forState:UIControlStateNormal];
+    if (self.defaultNum !=nil) {
+        
+        NSString *df = [NSString stringWithFormat:@"f%@.png",self.defaultNum];
+        self.imgDf = [UIImage imageNamed:df];
+        [self.defaultImgView setImage:self.imgDf];
+        NSLog(@"sent to result df %@", df);
+    } else if (self.firstColNum != nil && self.secondColNum != nil)
+    {
+        NSString *sl = [NSString stringWithFormat:@"f%@.png",self.firstColNum];
+        NSString *sr = [NSString stringWithFormat:@"f%@.png", self.secondColNum];
+        self.imgLeft = [UIImage imageNamed:sl];
+        self.imgRight = [UIImage imageNamed:sr];
+        
+        [self.subViewImgleft setImage:self.imgLeft];
+        [self.subViewImgRight setImage:self.imgRight];
+        
+        NSLog(@"sent to result sl %@", sl);
+        NSLog(@"sent to result sl %@", sr);
+    }else if(self.img != nil){
+        [self.defaultImgView setImage:self.img];
+    }
     
-    [self.resultImage setImage:self.img];
- 
+    
+    
+    //[self.defaultImgView setImage:self.img];
     UITapGestureRecognizer *tap =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [self.resultImage addGestureRecognizer:tap];
-
+    [self.combinedViewImg addGestureRecognizer:tap];
     
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
-    [self.resultImage addGestureRecognizer:pinch];
-    
+    [self.combinedViewImg addGestureRecognizer:pinch];
+}
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!self.bannerIsVisible) {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, -50.0f);
+        self.bannerIsVisible = YES;
+    }
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if (self.bannerIsVisible) {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        banner.frame =CGRectOffset(banner.frame, 0, 50.0f);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
 }
 
 -(void)tapAction
@@ -67,11 +105,11 @@
 }
 
 
-- (IBAction)cardDismiss:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 - (void)viewDidUnload {
-    [self setResultImage:nil];
+    [self setCombinedViewImg:nil];
+    [self setSubViewImgleft:nil];
+    [self setSubViewImgRight:nil];
+    [self setDefaultImgView:nil];
     [super viewDidUnload];
 }
 @end

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1810947D1704F17F00F7D2B9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1810947B1704F15B00F7D2B9 /* Default.png */; };
 		1810947F1704F1C100F7D2B9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1810947E1704F1C100F7D2B9 /* Default@2x.png */; };
+		185A97C3170E081900B85075 /* f34.png in Resources */ = {isa = PBXBuildFile; fileRef = 185A97C1170E081900B85075 /* f34.png */; };
+		185A97C4170E081900B85075 /* f21.png in Resources */ = {isa = PBXBuildFile; fileRef = 185A97C2170E081900B85075 /* f21.png */; };
+		18689826170F5EBB00707CFA /* UIViewController+ShowModalFromView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18689825170F5EBB00707CFA /* UIViewController+ShowModalFromView.m */; };
+		18689828170F82EB00707CFA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18689827170F82EB00707CFA /* iAd.framework */; };
 		18868D531703BAF2009B409C /* pickergobtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 18868D521703BAF2009B409C /* pickergobtn.png */; };
 		188989AC16E6B249008E3681 /* f1.png in Resources */ = {isa = PBXBuildFile; fileRef = 188989A216E6B249008E3681 /* f1.png */; };
 		188989AD16E6B249008E3681 /* f2.png in Resources */ = {isa = PBXBuildFile; fileRef = 188989A316E6B249008E3681 /* f2.png */; };
@@ -30,10 +34,8 @@
 		188DCD1216B58E7A00F7E971 /* NumberGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188DCD1116B58E7A00F7E971 /* NumberGridViewController.m */; };
 		188DCD1D16B58FB600F7E971 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188DCD1C16B58FB600F7E971 /* ResultViewController.m */; };
 		18D9B80116FDFBE4007AB59A /* f13.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B7FE16FDFBE4007AB59A /* f13.png */; };
-		18D9B80216FDFBE4007AB59A /* f20.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B7FF16FDFBE4007AB59A /* f20.png */; };
-		18D9B80316FDFBE4007AB59A /* f25.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B80016FDFBE4007AB59A /* f25.png */; };
 		18D9B80516FDFCC8007AB59A /* optionviewbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B80416FDFCC8007AB59A /* optionviewbackground.png */; };
-		18D9B80716FE045F007AB59A /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B80616FE045F007AB59A /* question.png */; };
+		18D9B80716FE045F007AB59A /* f?.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B80616FE045F007AB59A /* f?.png */; };
 		18D9B80C16FE0CBE007AB59A /* CustomNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9B80B16FE0CBE007AB59A /* CustomNumberViewController.m */; };
 		18D9B81016FE2589007AB59A /* pickerbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D9B80F16FE2589007AB59A /* pickerbackground.png */; };
 		DA48137017045F450090A17E /* customresultbg.png in Resources */ = {isa = PBXBuildFile; fileRef = DA48136F17045F450090A17E /* customresultbg.png */; };
@@ -50,6 +52,11 @@
 /* Begin PBXFileReference section */
 		1810947B1704F15B00F7D2B9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1810947E1704F1C100F7D2B9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		185A97C1170E081900B85075 /* f34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f34.png; sourceTree = "<group>"; };
+		185A97C2170E081900B85075 /* f21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f21.png; sourceTree = "<group>"; };
+		18689824170F5EBB00707CFA /* UIViewController+ShowModalFromView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowModalFromView.h"; sourceTree = "<group>"; };
+		18689825170F5EBB00707CFA /* UIViewController+ShowModalFromView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShowModalFromView.m"; sourceTree = "<group>"; };
+		18689827170F82EB00707CFA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		18868D521703BAF2009B409C /* pickergobtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickergobtn.png; sourceTree = "<group>"; };
 		188989A216E6B249008E3681 /* f1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f1.png; sourceTree = "<group>"; };
 		188989A316E6B249008E3681 /* f2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f2.png; sourceTree = "<group>"; };
@@ -80,10 +87,8 @@
 		188DCD1B16B58FB600F7E971 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		188DCD1C16B58FB600F7E971 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		18D9B7FE16FDFBE4007AB59A /* f13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f13.png; sourceTree = "<group>"; };
-		18D9B7FF16FDFBE4007AB59A /* f20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f20.png; sourceTree = "<group>"; };
-		18D9B80016FDFBE4007AB59A /* f25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f25.png; sourceTree = "<group>"; };
 		18D9B80416FDFCC8007AB59A /* optionviewbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionviewbackground.png; sourceTree = "<group>"; };
-		18D9B80616FE045F007AB59A /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		18D9B80616FE045F007AB59A /* f?.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f?.png"; sourceTree = "<group>"; };
 		18D9B80A16FE0CBE007AB59A /* CustomNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNumberViewController.h; sourceTree = "<group>"; };
 		18D9B80B16FE0CBE007AB59A /* CustomNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNumberViewController.m; sourceTree = "<group>"; };
 		18D9B80F16FE2589007AB59A /* pickerbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerbackground.png; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18689828170F82EB00707CFA /* iAd.framework in Frameworks */,
 				188DCCF616B58E7A00F7E971 /* UIKit.framework in Frameworks */,
 				188DCCF816B58E7A00F7E971 /* Foundation.framework in Frameworks */,
 				188DCCFA16B58E7A00F7E971 /* CoreGraphics.framework in Frameworks */,
@@ -124,6 +130,8 @@
 		188989A116E6B231008E3681 /* flame cards */ = {
 			isa = PBXGroup;
 			children = (
+				185A97C1170E081900B85075 /* f34.png */,
+				185A97C2170E081900B85075 /* f21.png */,
 				DAE19C1317048815003FBFCC /* settingicon.png */,
 				DA48136F17045F450090A17E /* customresultbg.png */,
 				18868D521703BAF2009B409C /* pickergobtn.png */,
@@ -131,11 +139,9 @@
 				DA520EB3170357F600637F6D /* mainbg.png */,
 				DA520EAD1703510600637F6D /* start.jpeg */,
 				18D9B80F16FE2589007AB59A /* pickerbackground.png */,
-				18D9B80616FE045F007AB59A /* question.png */,
+				18D9B80616FE045F007AB59A /* f?.png */,
 				18D9B7FE16FDFBE4007AB59A /* f13.png */,
 				18D9B80416FDFCC8007AB59A /* optionviewbackground.png */,
-				18D9B7FF16FDFBE4007AB59A /* f20.png */,
-				18D9B80016FDFBE4007AB59A /* f25.png */,
 				188989A216E6B249008E3681 /* f1.png */,
 				188989A316E6B249008E3681 /* f2.png */,
 				188989A416E6B249008E3681 /* f3.png */,
@@ -153,6 +159,7 @@
 		188DCCE616B58E7A00F7E971 = {
 			isa = PBXGroup;
 			children = (
+				18689827170F82EB00707CFA /* iAd.framework */,
 				1810947E1704F1C100F7D2B9 /* Default@2x.png */,
 				1810947B1704F15B00F7D2B9 /* Default.png */,
 				DAE19C1F1704C113003FBFCC /* Default-568h@2x.png */,
@@ -194,6 +201,8 @@
 				188DCD1116B58E7A00F7E971 /* NumberGridViewController.m */,
 				18D9B80A16FE0CBE007AB59A /* CustomNumberViewController.h */,
 				18D9B80B16FE0CBE007AB59A /* CustomNumberViewController.m */,
+				18689824170F5EBB00707CFA /* UIViewController+ShowModalFromView.h */,
+				18689825170F5EBB00707CFA /* UIViewController+ShowModalFromView.m */,
 				188DCCFC16B58E7A00F7E971 /* Supporting Files */,
 			);
 			path = RLScrumVoter;
@@ -280,10 +289,8 @@
 				188989B416E6B249008E3681 /* f9.png in Resources */,
 				188989B516E6B249008E3681 /* f0.png in Resources */,
 				18D9B80116FDFBE4007AB59A /* f13.png in Resources */,
-				18D9B80216FDFBE4007AB59A /* f20.png in Resources */,
-				18D9B80316FDFBE4007AB59A /* f25.png in Resources */,
 				18D9B80516FDFCC8007AB59A /* optionviewbackground.png in Resources */,
-				18D9B80716FE045F007AB59A /* question.png in Resources */,
+				18D9B80716FE045F007AB59A /* f?.png in Resources */,
 				18D9B81016FE2589007AB59A /* pickerbackground.png in Resources */,
 				DA520EAE1703510600637F6D /* start.jpeg in Resources */,
 				DA520EB4170357F600637F6D /* mainbg.png in Resources */,
@@ -296,6 +303,8 @@
 				DAE19C201704C113003FBFCC /* Default-568h@2x.png in Resources */,
 				1810947D1704F17F00F7D2B9 /* Default.png in Resources */,
 				1810947F1704F1C100F7D2B9 /* Default@2x.png in Resources */,
+				185A97C3170E081900B85075 /* f34.png in Resources */,
+				185A97C4170E081900B85075 /* f21.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +321,7 @@
 				188DCD1D16B58FB600F7E971 /* ResultViewController.m in Sources */,
 				DA81A03E16FB555A00D65BEC /* CardControllerViewViewController.m in Sources */,
 				18D9B80C16FE0CBE007AB59A /* CustomNumberViewController.m in Sources */,
+				18689826170F5EBB00707CFA /* UIViewController+ShowModalFromView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
